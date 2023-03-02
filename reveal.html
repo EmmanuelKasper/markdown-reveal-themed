@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Emmanuel “Kasper” Kasprzyk">
+  <meta name="dcterms.date" content="2022-10-16">
+  <title>OpenShift Local and Microshift</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reset.css">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/redhat.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">OpenShift Local and Microshift</h1>
+  <p class="author">Emmanuel “Kasper” Kasprzyk</p>
+  <p class="date">16 October 2022</p>
+</section>
+
+<section id="openshift-local" class="slide level2">
+<h2>OpenShift Local</h2>
+<ul>
+<li>single node OpenShift VM</li>
+<li>slightly different from OCP single node install</li>
+<li>is not meant for production</li>
+</ul>
+</section>
+<section id="where-to-start" class="slide level2">
+<h2>Where to start</h2>
+<ul>
+<li>single binary to download, works on Mac / Linux / Windows</li>
+<li>simple worklow crc setup / crc start / crc stop</li>
+</ul>
+</section>
+<section id="under-the-hood" class="slide level2">
+<h2>Under the hood</h2>
+<ul>
+<li>special IPI openshift</li>
+<li>has VM network and DNS</li>
+<li>no load balancer</li>
+</ul>
+</section>
+<section id="microshift" class="slide level2">
+<h2>Microshift</h2>
+<ul>
+<li>single binary kubernetes + OpenShift API server</li>
+<li>work in progress</li>
+<li>target are ostree based RHEL deployments</li>
+</ul>
+</section>
+<section id="where-does-to-use-what" class="slide level2">
+<h2>Where does to use what</h2>
+<ul>
+<li>developer laptop -&gt; OpenShift Local</li>
+<li>Field Device (embedded) with needs of Pods and k8s services -&gt; Red Hat Device Edge / Microshift</li>
+</ul>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/js/reveal.js"></script>
+  <script src="reveal.js/js/redhat.js"></script>
+  <script src="reveal.js/lib/js/head.min.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

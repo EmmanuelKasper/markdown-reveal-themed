@@ -1,0 +1,11 @@
+--- reveal.old	2022-10-16 12:16:24.258586459 +0200
++++ reveal.html	2022-10-16 12:16:55.430851874 +0200
+@@ -84,6 +84,8 @@
+   </div>
+ 
+   <script src="reveal.js/js/reveal.js"></script>
++  <script src="reveal.js/js/redhat.js"></script>
++  <script src="reveal.js/lib/js/head.min.js"></script>
+ 
+   <script>
+ 
